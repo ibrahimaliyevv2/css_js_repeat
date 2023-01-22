@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.list{
+    margin-top: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.list-item{
+    list-style: none;
+    font-size: 40px;
+    padding: 20px;
+    color: white;
+    background-color: blue;
+    border: 3px solid transparent;
+    transition: all 0.3s;
+    cursor: pointer;
+
+}
+
+.list-item:hover{
+    border: 3px solid black;
+}
+
+.active{
+    background-color: red;
+    border: 3px solid black;
+}
+
+.paragraph{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 50px;
+    color: green;
+}

@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.ply{
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+    position: relative;
+    margin-left: 100px;
+}
+
+.ply::before{
+    content: "";
+    position: absolute;
+    background-color: yellow;
+    width: 0%;
+    height: 3px;
+    bottom: -4px;
+    left: 50%;
+    border-radius: 3px;
+    transition: 0.4s;
+}
+
+.ply:hover::before{
+    width: 100%;
+    left: 0%;
+}
