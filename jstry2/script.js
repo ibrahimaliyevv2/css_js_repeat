@@ -10,45 +10,24 @@ btn.onclick = function(){
     var li = document.createElement('li')
     li.innerText = inp.value;
 
-    var editBtn = document.createElement('button');
-    editBtn.innerText = 'E';
-    li.appendChild(editBtn);
-
-    editBtn.onclick = function(){
-        var editInput = document.createElement('input');
-        editBtn.parentElement.appendChild(editInput);
-        var saveBtn = document.createElement('button');
-        saveBtn.innerText = 'save';
-        editBtn.parentElement.appendChild(saveBtn);
 
 
-        editInput.value = editBtn.parentElement.innerText.substring(0, editBtn.parentElement.innerText.length - 6);
-        saveBtn.onclick = function(){
-            currentLi = editBtn.parentElement;
-            currentLi.innerText = editInput.value;
-            currentLi.appendChild(editBtn);
-            currentLi.appendChild(deleteBtn);
-            
-            editBtn.parentElement.remove(editInput);
-            editBtn.parentElement.remove(saveBtn);
-        }
+    if(inp.value!=null && inp.value!='' && inp.value!=' '){
+        ul.appendChild(li);
     }
-
+    
     var deleteBtn = document.createElement('button');
     deleteBtn.innerText = 'X';
     deleteBtn.style.color = 'red';
     li.appendChild(deleteBtn);
 
     deleteBtn.onclick = function(){
-        deleteBtn.parentElement.remove();
+        // deleteBtn.parentElement.remove();
+        li.style.textDecoration = 'line-through';
+        deleteBtn.remove();
     }
-
-    ul.appendChild(li);
 
     inp.value = '';
 }
 
 
-var hshs = document.querySelector('#hshs');
-
-console.log(hshs.parentNode);
